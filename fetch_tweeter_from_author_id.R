@@ -12,7 +12,6 @@
 
 library(tidyverse)
 library(stringi)
-library(DT)
 library(httr)
 library(openalexR)
 library(rtweet)
