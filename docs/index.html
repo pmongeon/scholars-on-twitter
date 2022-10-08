@@ -4251,7 +4251,7 @@ for (d in 1:nrow(dois)) {
   # add tweeters&#39; handle to vector of unique handles 
   t = 1
   while (t &lt;= length(tweeters)) {
-    handles &lt;- c(handles,tweeters[[1]]$subj_id) %&gt;% unique()
+    handles &lt;- c(handles,tweeters[[t]]$subj_id) %&gt;% unique()
     handles &lt;- c(handles,tweeters[[t]]$subj$`original-tweet-author`) %&gt;% unique()
     t=t+1
   }
