@@ -127,7 +127,7 @@ for (d in 1:nrow(dois)) {
   # add tweeters' handle to vector of unique handles 
   t = 1
   while (t <= length(tweeters)) {
-    handles <- c(handles,tweeters[[1]]$subj_id) %>% unique()
+    handles <- c(handles,tweeters[[t]]$subj_id) %>% unique()
     handles <- c(handles,tweeters[[t]]$subj$`original-tweet-author`) %>% unique()
     t=t+1
   }
