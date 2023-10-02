@@ -60,7 +60,7 @@ author_id <- ""
 author_url <- str_replace(author_id,"https://openalex.org","https://api.openalex.org") 
 
 # This makes the API call and stores the data into a list.
-openalex_author_data <- openalexR::oaApiRequest(author_url, mailto = email)
+openalex_author_data <- openalexR::oa_request(author_url, mailto = email)
 ```
 
 ## Author names
@@ -93,7 +93,7 @@ The next step is to collect the DOIs of all the works of our authors. This can b
 
 ```{r get_works}
 # This creates a list with all the works
-works<- oaApiRequest(openalex_author_data$works_api_url,
+works<- oa_request(openalex_author_data$works_api_url,
                      mailto = email) 
 
 # This creates a tibble with the DOIs of the works.
